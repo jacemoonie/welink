@@ -1,5 +1,7 @@
-<?php 
-include 'backend\initialize.php';
-echo WWW_ROOT; 
+<?php
+include_once "backend\initialize.php" ;
+
+// print_r(Login::isLoggedIn());
+
 
 ?>

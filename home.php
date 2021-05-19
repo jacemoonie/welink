@@ -72,6 +72,32 @@ $pageTitle="Home | WeLink";
                 </div>
             </footer>
         </div>
+        <div id="myLogoutModal" class="logout-modal">
+            <div class="logout-wrapper">
+                <div class="logout-container">
+                <svg viewBox="0 0 24 24" width="24px" class="down"><g><path d="M12.538 6.478c-.14-.146-.335-.228-.538-.228s-.396.082-.538.228l-9.252 9.53c-.21.217-.27.538-.152.815.117.277.39.458.69.458h18.5c.302 0 .573-.18.69-.457.118-.277.058-.598-.152-.814l-9.248-9.532z"></path></g></svg>
+                <div class="logout-modal-body">
+                    <div class="logout-modal-header" role="button" tabIndex="0" data-focusable="true">
+                        <div class="wrapper-image">
+                            <img src="<?php echo url_for($user->profileImage); ?>" alt="<?php echo $user->firstName.' '.$user->lastName; ?>" style="20px;" class="">
+                        </div>
+                        <div class="user-name">
+                            <span class="user-fullname">
+                            <?php echo $user->firstName.' '.$user->lastName; ?>
+                            </span>
+                            <span class="user-screenName">
+                                @<?php echo $user->username; ?>
+                            </span>
+                        </div>
+                        <img src="frontend\assets\images\check.svg" alt="" class="" width="20px">
+                    </div>
+                    <a href="<?php echo url_for('logout'); ?>" class="logout-modal-footer">
+                    <i class="fa fa-sign-out">Logout @<?php echo $user->username; ?></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main role="main" class="mainSectionContainer">MAIN</main>
 </section>

@@ -175,7 +175,63 @@ class User{
         // $sql = "SELECT {$columnName} FROM {$tableName} WHERE {$columns}";
 
 
-        var_dump($sql);
+        // var_dump($sql);
+
+        // Prepare new statement
+        $stmt = $this->pdo->prepare($sql);
+
+        /*
+        * Bind parameters into the query.
+        *
+        * We need to pass the value by reference as the PDO::bindParam method uses
+        * that same reference.
+        */
+        foreach($fields as $key => &$value) {
+
+            // Prefix the placeholder with the identifier
+            $key = ':' . $key;
+
+            // Bind the parameter.
+            $stmt->bindValue($key, $value);
+
+        }
+
+        /*
+        * Check if the query was executed. This does not check if any data was actually
+        * inserted as MySQL can be set to discard errors silently.
+        */
+        if(!$stmt->execute()) {
+            throw new ErrorException('Could not execute query');
+        }
+    
+    }
+
+    public function delete($tableName, array $fields)
+    {
+
+        /*
+        * Check for input errors.
+        */
+        if(empty($fields)) {
+            throw new InvalidArgumentException('Cannot insert an empty array.');
+        }
+        if(!is_string($tableName)) {
+            throw new InvalidArgumentException('Table name must be a string.');
+        }
+
+
+        $sql = "DELETE FROM {$tableName}";
+        $where =" WHERE ";
+        // $sql = "UPDATE {$tableName} SET {$columns} WHERE user_id={$user_id} ";
+        // $sql = "SELECT {$columnName} FROM {$tableName} WHERE {$columns}";
+        foreach($fields as $key => &$value) {
+
+            $sql .= "{$where} {$key} =:{$key}";
+            $where = " AND ";
+
+        }
+
+        // var_dump($sql);
 
         // Prepare new statement
         $stmt = $this->pdo->prepare($sql);
