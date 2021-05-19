@@ -1,7 +1,7 @@
 <?php 
 include 'backend\classes\Database.php';
 Include 'backend\initialize.php'; 
-Include 'backend\shared\header.php'; 
+
 
 if(isset($_SESSION['userLoggedIn'])){
     redirect_to(url_for("home"));
@@ -30,7 +30,7 @@ if(isset($_SESSION['userLoggedIn'])){
     </div>
     <div class="right">
         <div class="middle-content">
-        <i class="fas fa-link"></i>
+        <img src="frontend\assets\favicon\icons8-link-100.png" width="50px;" height="50px;">
         <h1> See what's happening in the world right now</h1>
         <h4> Join WeLink now</h4>
         <a href="signup" class="sign-up">Sign up</a>

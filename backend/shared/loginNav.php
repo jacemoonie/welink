@@ -2,7 +2,7 @@
         <ul>
             <li>
                <a href="index">
-                <i class="fas fa-link"></i>
+               <img src="frontend\assets\favicon\icons8-link-100.png" width="20px;" height="20px;">
                    Home
                </a> 
             </li>

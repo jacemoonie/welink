@@ -20,7 +20,7 @@ header.h-heading-wr {
     grid-column: 1/2;
     height: 100%;
     padding: 0 2rem;
-    border-right: .1rem solid var(--gray);
+    border-right: .1rem solid rgb(235,238,240);
     width: 341px;
     position: relative;
 }
@@ -56,10 +56,10 @@ a.site-logo-link {
     border: .1rem solid var(--black);
     transition:background-color .3s;
 }
-.site-logo-link svg{
+.site-logo-link img{
     fill:var(--blue);
-    width:3rem;
-    height:3rem;
+    width:5rem;
+    height:5rem;
 }
 .site-logo-link:hover{
     background-color: var(--blue-50-a1);

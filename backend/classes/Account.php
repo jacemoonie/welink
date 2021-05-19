@@ -151,7 +151,7 @@ class Account{
             $profilePic="frontend\assets\images\defaultPic.svg";
             $profileCover="frontend\assets\images\backgroundImage.svg";
         }elseif($rand==2){
-            $profilePic="frontend\assets\images\avatar.png";
+            $profilePic="frontend\assets\images\profilePic.jpeg";
             $profileCover="frontend\assets\images\backgroundCoverPic.svg";
         }
 

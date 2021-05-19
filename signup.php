@@ -2,6 +2,7 @@
 Include 'backend\initialize.php'; 
 Include 'backend\shared\register_handlers.php';
 
+
 $pageTitle="Signup | WeLink";
 ?>
 

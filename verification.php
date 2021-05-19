@@ -4,7 +4,7 @@ Include 'backend\shared\verify_handlers.php';
 
 $pageTitle="Verify your Account";
 ?>
-
+<?php require_once 'backend\shared\header.php';?>
 <section class="signup-container">
 <?php require_once 'backend\shared\loginNav.php';?>
     <div class="form-container">

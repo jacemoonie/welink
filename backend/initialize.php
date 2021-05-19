@@ -26,6 +26,7 @@ $loadFromUser = new User;
 $verify = new Verify;
 
 include 'backend\shared\functions.php';
+include 'backend\shared\header.php';
 
 
 
