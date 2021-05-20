@@ -26,6 +26,7 @@ spl_autoload_register(function($class){
 $account= new Account;
 $loadFromUser = new User;
 $verify = new Verify;
+$loadFromPosts = new Posts;
 
 
 include(__ROOT__.'\backend\shared\functions.php'); 

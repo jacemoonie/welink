@@ -16,6 +16,8 @@ if(isset($_SESSION['userLoggedIn']) && $status->status === "1"){
 
 $user = $loadFromUser->userData($user_id);
 
+
+
 $pageTitle="Home | WeLink";
 
 ?>
@@ -29,19 +31,23 @@ $pageTitle="Home | WeLink";
                 <img src="<?php echo url_for("frontend\assets\images\star.svg"); ?>" width="40px" height="40px" alt="" class="">
             </div>
             <div class="header-post">
-            <div class="userImageContainer" aria-label="<?php  echo $user->firstName.' '.$user->lastName;?>">
-                <img src="<?php echo url_for($user->profileImage); ?>" alt="<?php  echo $user->firstName.' '.$user->lastName;?>" class="">
+                <a href="<?php echo url_for($user->username); ?>" role="link" class="userImageContainer" aria-label="<?php  echo $user->firstName.' '.$user->lastName;?>">
+                    <img src="<?php echo url_for($user->profileImage); ?>" alt="<?php  echo $user->firstName.' '.$user->lastName;?>" class="">
+                </a>
+                <form class="textareaContainer">
+                    <textarea name="" id="postTextarea" placeholder="What's happening?" aria-label="What's happening?"  ></textarea>
+                    <div class="buttonsContainer">
+                        <input type="submit" id="submitPostButton" disabled="true" role="button" value="POST" class="">
+                    </div>
+                </form>
             </div>
-            <form class="textareaContainer">
-                <textarea name="" id="postTextarea" placeholder="What's happening?" aria-label="What's happening?" autofocus ></textarea>
-                <div class="buttonsContainer">
-                    <input type="submit" id="submitPostButton" disabled="true" role="button" value="POST" class="">
-                </div>
-            </form>
-            </div>
+            <section aria-label="Timeline:Your Home Timeline" class="postContainer">
+                <?php $loadFromPosts->posts($user_id,10)?>
+            </section>
         </section>
         <aside class="" role="complementary"></aside>
     </main>
 </section>
 
 <script src="<?php echo url_for('frontend\assets\js\common.js'); ?>"></script>
+<script src="<?php echo url_for('frontend\assets\js\fetchPosts.js'); ?>"></script>

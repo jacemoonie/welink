@@ -7,7 +7,7 @@ if(is_post_request()){
         $allowed_tags='<div><li><h2><h3><ul><p><em><strong><br>';
         $statusText= strip_tags($_POST['onlyStatusText'],$allowed_tags);
         $lastid = $loadFromUser->create("post",array("status"=>$statusText,"postBy"=>$userid));
-        echo $lastid;
+        $loadFromPosts->posts($userid,10);
     }
 }
 

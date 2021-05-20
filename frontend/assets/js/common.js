@@ -47,7 +47,7 @@ $("#submitPostButton").click(e=>{
     
     if(textValue != "" && textValue != null){
         $.post("http://localhost/welink/backend/ajax/post.php",{onlyStatusText:textValue,userid:userid},function(data){
-            alert(data);
+  
             $(".postContainer").html(data);
             $("#postTextarea").val("");
             submitButton.prop("disabled",true);
