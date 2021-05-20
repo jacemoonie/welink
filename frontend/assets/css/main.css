@@ -281,6 +281,7 @@ input#submitPostButton {
     border-radius: 40px;
     padding: 7px var(--spacing);
     border: none;
+    width:80px;
 }
 #submitPostButton:disabled{
     cursor: not-allowed !important;

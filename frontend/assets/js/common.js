@@ -46,7 +46,8 @@ $("#submitPostButton").click(e=>{
     let userid=uid;
     
     if(textValue != "" && textValue != null){
-        $.post("http://localhost/twitter/backend/ajax/post.php",{onlyStatusText:textValue,userid:userid},function(data){
+        $.post("http://localhost/welink/backend/ajax/post.php",{onlyStatusText:textValue,userid:userid},function(data){
+            alert(data);
             $(".postContainer").html(data);
             $("#postTextarea").val("");
             submitButton.prop("disabled",true);

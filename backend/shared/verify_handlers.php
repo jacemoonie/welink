@@ -1,4 +1,14 @@
 <?php
+$user_id=$_SESSION['userLoggedIn'];
+
+$status=$verify->getVerifyStatus("status",$user_id);
+if(Login::isLoggedIn()){
+    redirect_to(url_for('home'));
+}else if(isset($_SESSION['userLoggedIn']) && $status->status=='1'){
+    redirect_to(url_for('home'));
+}
+  
+
 $errors=array();
 if(isset($_SESSION['userLoggedIn'])){
     $user_id =(int)($_SESSION['userLoggedIn']);
