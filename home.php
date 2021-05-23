@@ -36,8 +36,18 @@ $pageTitle="Home | WeLink";
                 </a>
                 <form class="textareaContainer">
                     <textarea name="" id="postTextarea" placeholder="What's happening?" aria-label="What's happening?"  ></textarea>
+                    <div class="hash-box-wrapper">
+                        <div class="hash-box" role="listbox" aria-multiselectable="false">
+                            <ul class="">
+                            </ul>
+                        </div>
+                    </div>
                     <div class="buttonsContainer">
                         <input type="submit" id="submitPostButton" disabled="true" role="button" value="POST" class="">
+                        <div class="w-count-wrapper">
+                            <div id="count">200</div>
+                            <div class="vertical-pipe"></div>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -51,3 +61,4 @@ $pageTitle="Home | WeLink";
 
 <script src="<?php echo url_for('frontend\assets\js\common.js'); ?>"></script>
 <script src="<?php echo url_for('frontend\assets\js\fetchPosts.js'); ?>"></script>
+<script src="<?php echo url_for('frontend\assets\js\hashtag.js'); ?>"></script>
