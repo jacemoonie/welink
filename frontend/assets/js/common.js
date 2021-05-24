@@ -68,3 +68,8 @@ $("#submitPostButton").click(e=>{
     }
     
 })
+
+$(document).on("click","#go-back-home",function(e){
+    e.preventDefault();
+    window.location.href="http://localhost/welink/home";
+})

@@ -388,7 +388,7 @@ input#submitPostButton {
     font-weight: 400;
     color: rgb(91,112,131);
 }
-.postContainer .post{
+.postContainer .post, .profilePostContainer .post{
     display:flex;
     flex-direction:column;
     padding:var(--spacing);
@@ -396,7 +396,7 @@ input#submitPostButton {
     border-bottom:.1rem solid rgb(235,238,240);
     transition: background-color 0.3s;
 }
-.postContainer .mainContentContainer{
+.postContainer .mainContentContainer, .profilePostContainer .mainContentContainer{
     display:flex;
     flex:1;
 }
@@ -423,7 +423,7 @@ a.displayName{
 a.displayName:hover{
     text-decoration: underline;
 }
-.postContainer .username,.postContainer .date{
+.postContainer .username,.postContainer .date, .profilePostContainer .username, .profilePostContainer .date{
     font-size:1.5rem;
     font-weight:600;
     color:var(--grayText);
@@ -644,13 +644,15 @@ span.description{
     color: var(--grayText);
     justify-content: center;
 }
-.tab.active{
-    color: var(--blue);
-    border-bottom: .2rem solid var(--blue);
-}
 .tabsContainer .tab span{
     font-size: 2rem;
     color: var(--grayText);
+}
+.tab.active{
+    border-bottom: .2rem solid var(--blue);
+}
+.tab.active span{
+    color: var(--blue);
 }
 .tab:hover{
     color: var(--blue);
