@@ -1,6 +1,6 @@
 <?php
     if(!isset($pageTitle)){
-        $pageTitle="WeLink - Social Networking Site / WSNS";
+        $pageTitle="WeLink - Social Networking Site | WSNS";
     }
 ?>
 <!DOCTYPE html>

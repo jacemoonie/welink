@@ -109,6 +109,23 @@ class Posts{
         $stmt ->execute();
         return $stmt ->rowCount() > 0;
     }
+
+    public function PostCounts($profileId){
+        $stmt = $this->pdo->prepare("SELECT count('postID') as `postCount` FROM `post` WHERE `postBy` =:profileId");
+        $stmt->bindParam(":profileId",$profileId,PDO::PARAM_INT);
+        $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($data["postCount"] > 0){
+            return $data["postCount"];
+        }
+    }
+
+    public function createTab($name,$href,$isSelected){
+        $className = $isSelected ? "tab active":"tab";
+        return "<a href='$href' class='$className'>
+            <span>$name</span>
+            </a>";
+    }
 }
 
 

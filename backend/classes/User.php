@@ -262,6 +262,11 @@ class User{
     
     }
 
+    public function userIdByUsername($username){
+        $user = $this->get("users","user_id",array("username" => $username));
+        return $user->user_id;
+    }
+
     public function timeAgo($datetime){
         $time = strtotime($datetime);
         $current = time();
