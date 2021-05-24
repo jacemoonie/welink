@@ -27,6 +27,7 @@ $account= new Account;
 $loadFromUser = new User;
 $verify = new Verify;
 $loadFromPosts = new Posts;
+$postsControl = new PostsControls;
 
 
 include(__ROOT__.'\backend\shared\functions.php'); 

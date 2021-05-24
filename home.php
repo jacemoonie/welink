@@ -62,3 +62,4 @@ $pageTitle="Home | WeLink";
 <script src="<?php echo url_for('frontend\assets\js\common.js'); ?>"></script>
 <script src="<?php echo url_for('frontend\assets\js\fetchPosts.js'); ?>"></script>
 <script src="<?php echo url_for('frontend\assets\js\hashtag.js'); ?>"></script>
+<script src="<?php echo url_for('frontend\assets\js\likePost.js'); ?>"></script>
