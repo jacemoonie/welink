@@ -566,7 +566,7 @@ span.likesCounter {
     padding: var(--spacing);
     /*! min-height: 6.6rem; */
 }
-.edit-profile-btn{
+.edit-profile-btn, .p-btn{
     background-color: rgba(0,0,0,0);
     border: none;
     color: var(--blue);
@@ -577,14 +577,16 @@ span.likesCounter {
     border-radius: var(--corner-radius-full);
     cursor: pointer;
     text-align: center;
+    margin-left: var(--spacing);
 }
-.edit-profile-btn:hover{
+.edit-profile-btn:hover,.p-btn:hover{
     background-color: var(--blue-50-a1);
 }
 .profileHeaderContainer .userDetailsContainer{
     display: flex;
     flex-direction: column;
     padding: 0 var(--spacing);
+    margin-top: 3rem;
 }
 .profileHeaderContainer .displayName{
     font-size: 1.9rem;
@@ -624,11 +626,15 @@ span.description{
     border-bottom:0.1rem solid #000 ;
 }
 .followersContainer .value{
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(15,20,25);
     margin-right: 0.5rem;
 }
 .followersContainer span:not(.value){
     color: rgb(91,112,131);
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 .tabsContainer{
     display: flex;
@@ -640,13 +646,15 @@ span.description{
     height: 52px;
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--grayText);
     justify-content: center;
+    transition: background-color 0.3s;
 }
 .tabsContainer .tab span{
     font-size: 2rem;
     color: var(--grayText);
+    transition: color 0.3s;
 }
 .tab.active{
     border-bottom: .2rem solid var(--blue);
@@ -655,7 +663,151 @@ span.description{
     color: var(--blue);
 }
 .tab:hover{
-    color: var(--blue);
     background-color: var(--blue-50-a1);
 }
+.tab:hover span{
+    color: var(--blue);
+}
+/* Profile modal style*/
+.modal-pic{
+    /* width: 100vw; */
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0.4);
+    /* display: none; */
+}
+.artdeco-modal-pic{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: rgb(101 119 134/20%) 0px 0px 15px, rgb(101 119 134/15%) 0px 0px 3px 1px;
+    background-color: #fff;
+    /*! height: 250px; */
+    max-height: 90vh;
+    min-width: 600px;
+    max-width: 80vw;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.header__topcard{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid var(--gray);
+    border-top-right-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    background-color: rgba(255,255,255,1);
+}
+
+.a-modal-site-logo-wrapper{
+    font-size: 3rem;
+    color: #1DA1F5;
+    padding-left: 23rem;
+}
+.modal-body__topcard {
+  width: 100%;
+  position: relative;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.modal-body__topcard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+.edit-profile__topcard-wrapper {
+  width: 360px;
+}
+.modal-body__topcard-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--corner-radius-full); 
+}
+.modal-body__topcard {
+  width: 100%;
+  position: relative;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.modal-body__topcard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+.edit-profile__topcard-wrapper {
+  width: 360px;
+  padding-right: 50px;
+}
+.topcard-btn-icon {
+  position: absolute;
+  cursor: pointer;
+  padding-right: 45px;
+  padding-bottom: 40px;
+}
+#camera-small {
+  width: 5rem;
+  height: 5rem;
+}
+input.fileInputPhoto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  font-size: 1px;
+  cursor: pointer;
+}
+.modal-pic input {
+  flex: 1;
+  padding: 1.5rem;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: rgb(15,20,25);
+  line-height: 1.3125;
+  border: none;
+}
+.a-modal-site-log-wrapper {
+  font-size: 3rem;
+  color: #1DA1F5;
+  padding-left: 26rem;
+}
+/* End of Profile modal style*/
+/* Profile cover modal style */
+.modal-body__topcard-cov{
+    width: 100%;
+    position: relative;
+    font-size: 2rem;
+}
+.modal-body__topcard-heading{
+    padding: 2rem;
+    line-height: 1.5;
+}
+.modal-body__topcard-container-cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit-profile-cov__topcard-wrapper{
+    width: 100%;
+    height: 254px;
+}
+.edit-profile-cov__topcard-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* End of Profile cover modal style */
  /* End of Profile */

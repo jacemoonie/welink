@@ -28,6 +28,7 @@ $loadFromUser = new User;
 $verify = new Verify;
 $loadFromPosts = new Posts;
 $postsControl = new PostsControls;
+$loadFromFriend = new Friend;
 
 
 include(__ROOT__.'\backend\shared\functions.php'); 
