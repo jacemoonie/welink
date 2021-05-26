@@ -169,7 +169,7 @@ $pageTitle=$profileData->firstName.' '.$profileData->lastName.'(@'.$profileData-
                 </div>
             </div>
         </section>
-        <aside class="" role="complementary"></aside>
+        <?php require_once 'backend\shared\aside-section.php'; ?>
     </main>
 </section>
 

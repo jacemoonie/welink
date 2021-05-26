@@ -12,11 +12,10 @@ class PostsControls{
     public function createControls($postId,$postedBy,$user_id){
 
         $replyButton = $this->createReplyButton($postId,$postedBy,$user_id);
-        $retweetButton = $this->createRetweetButton($postId,$postedBy,$user_id);
+        // $retweetButton = $this->createRetweetButton($postId,$postedBy,$user_id);
         $likeButton = $this->createLikeButton($postId,$postedBy,$user_id);
         return "<div class='post-footer'>
                     $replyButton
-                    $retweetButton
                     $likeButton
                 </div>";
     }
