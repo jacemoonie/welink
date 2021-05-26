@@ -17,6 +17,7 @@ function likePost(button,postId,likedBy,postedBy){
             likeButton.find(".fa-heart-o").addClass("fa-heart");
             likeButton.find(".fa-heart").removeClass("fa-heart-o");
         }
+        location.reload(true);
         // console.log(data);
         // alert(result);
     })

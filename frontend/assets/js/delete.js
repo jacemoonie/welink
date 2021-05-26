@@ -37,7 +37,7 @@ $(function(){
                 deleteModal.style.display = "none";
                 modal.style.display = "none";
                 $(".postContainer").html(data);
-                // location.reload(true)
+                location.reload(true);
         })
     }) 
     
