@@ -1,5 +1,6 @@
 $(function(){
     let uid = $(".u-p-id").data("uid");
+    let pid = $(".u-p-id").data("pid");
     let win = $(window);
     let offset = 10;
 
@@ -10,9 +11,17 @@ $(function(){
 
         if(content_y >= content_height-1){
             offset += 10;
-            $.post("http://localhost/welink/backend/ajax/fetchPosts.php",{fetchPosts:offset,userId:uid},function(data){   
+            if(uid == pid){
+                $.post("http://localhost/welink/backend/ajax/fetchPosts.php",{fetchPosts:offset,userId:uid},function(data){   
                 $(".postContainer").html(data);
-            })
+                $(".profilePostContainer").html(data);
+                })
+            }else{
+                $.post("http://localhost/welink/backend/ajax/fetchPosts.php",{fetchPosts:offset,userId:pid},function(data){   
+                $(".postContainer").html(data);
+                $(".profilePostContainer").html(data);
+                })
+            }
         }
     })
 })
