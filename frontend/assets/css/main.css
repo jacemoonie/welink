@@ -861,17 +861,19 @@ span.description{
 }
 .edit-profile__topcard-wrapper {
   width: 360px;
-  padding-right: 50px;
+  padding-right: 30px;
 }
 .topcard-btn-icon {
   position: absolute;
   cursor: pointer;
   padding-right: 45px;
   padding-bottom: 40px;
+  padding-left: 45px;
 }
 #camera-small {
   width: 5rem;
   height: 5rem;
+  margin-right: 20px;
 }
 input.fileInputPhoto {
   position: absolute;
@@ -887,12 +889,13 @@ input.fileInputPhoto {
 }
 .modal-pic input {
   flex: 1;
-  padding: 1.5rem;
+  padding: 6rem;
   font-size: 1.9rem;
   font-weight: 400;
   color: rgb(15,20,25);
   line-height: 1.3125;
   border: none;
+  /*! padding-left: 10px; */
 }
 .a-modal-site-log-wrapper {
   font-size: 3rem;
@@ -905,6 +908,7 @@ input.fileInputPhoto {
     width: 100%;
     position: relative;
     font-size: 2rem;
+    height: 70vh;
 }
 .modal-body__topcard-heading{
     padding: 2rem;
@@ -925,6 +929,63 @@ input.fileInputPhoto {
     object-fit: cover;
 }
 /* End of Profile cover modal style */
+/* Edit Profile Modal */
+.preview-modal-header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 0.1rem solid var(--gray);
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+.preview-header-content {
+    display: flex;
+    align-items: center;
+  }
+.preview-header-content h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+span.submitProfileChange {
+    background: var(--blue);
+    color: #fff;
+    padding: var(--spacing);
+    border-radius: var(--corner-radius-full);
+    font-size: 1.5rem inherit;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1.5rem;
+}
+.submitProfileChange:hover{
+    background-color: rgb(26,145,218)
+      
+}
+.preview-modal-body {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.preview-modal-body .modal-body-profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+.preview-modal-body .imagePreviewContainer{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+}
+img#imagePreview{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+/* End of Edit Profile Modal */
  /* End of Profile */
 
  /* Left section */
@@ -935,7 +996,7 @@ input.fileInputPhoto {
 
 .announce-container {
   border: 1px solid rgb(101,119,134);
-  height: 250px;
+  height: 230px;
 }
 .announcement.col h3 {
   padding-bottom: 1rem;
